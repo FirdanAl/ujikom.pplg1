@@ -1,95 +1,231 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-    <head>
-      <!-- Required meta tags -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script>
-        $(document).ready(function(){
-          $("form").submit(function(){
-            alert("Submitted");
-          });
-        });
-      </script>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      Sekolah
-    </title>
-    <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="general.css">
-  </head>
-  <body background="ocean.jpg">
-    <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <!-- Head -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="Home.html"><img src="logo.png" width="75px" height="50px"></a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbar">
-                   <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
-                       <li class="nav-item"><a class="nav-link active" aria-current="page" href="Home.html">Home</a></li>
-                       <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                       <li class="nav-item"><a class="nav-link" href="jurusan.html">Jurusan</a></li>
-                       <li class="nav-item"><a class="nav-link" href="ekskul.html">Ekskul</a></li>
-                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                   </ul>
-               </div>
-           </div>
-        </nav>   
-    <!-- Body -->
-    <!-- Regis -->
-    <form>
-    <h1 align="center">Registration</h1>
-    <p align="center">Please fill in this form to create an account.</p>
-    <div class="list" align="center">
-      <hr>
-        <label for="nama"><b>Name</b></label><br>
-        <input type="text" placeholder="Enter Your Name" name="nama" id="nama" required><br>
 
-        <label for="umur"><b>Age</b></label><br>
-        <input type="text" placeholder="Enter Your Age" name="umur" id="umur" required><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 4 TASIKMALAYA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Pastikan style.css memuat perubahan -->
+    <style>
+        /* CSS untuk gambar dalam card agar ukuran konsisten */
+        .card-img-top {
+            width: 100%;          /* Membuat gambar mengisi lebar penuh kolom */
+            height: 200px;        /* Mengatur tinggi gambar menjadi konsisten */
+            object-fit: cover;    /* Menjaga proporsi gambar dan memastikan gambar terpotong dengan baik */
+        }
+    </style>
+</head>
 
-        <label><b>Grade</b></label><br>
-        <select>
-          <option value="SMA">SMK</option>
-          <option value="SMA">SMA</option> 
-          <option value="SMP">SMP</option> 
-          <option value="SD">SD</option>   
-          <option value="TK">TK</option>   
-        </select>
-        <br>
-        <br>
-
-        <label><b>Gender</b></label><br>  
-        <input type="radio" value="Male" name="jenis kelamin"> Laki-laki
-        <input type="radio" value="Female" name="jenis kelamin"> Perempuan
-        <br> <br> 
-
-        <label><b>Phone</b></label><br>   
-        <input type="text" name="phone" placeholder="Phone Number" id="phone" size="10"/ required><br>
-
-        <label><b>Address</b></label><br>
-        <textarea cols="80" rows="5" placeholder="Current Address" id="add" value="address" required></textarea>
-        <br>
-
-        <label for="email"><b>Email</b></label><br>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
-
-        <label for="psw"><b>Password</b></label><br>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
-
-        <label><b>Upload Your Diploma:</b></label><br>
-        <input type="file" id="myFile" name="filename"><br>
-        <br> <br>
-
-        <input type="reset" value="Reset"> <input type="submit" value="Submit">
-      <hr>  
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Home.html"><img src="sekolah.png" width="75px" height="50px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="Home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="sejarah.html">Sejarah</a></li>
+              <li class="nav-item"><a class="nav-link" href="jurusan.html">Jurusan</a></li>
+              <li class="nav-item"><a class="nav-link" href="ekskul.html">Ekskul</a></li>
+              <li class="nav-item"><a class="nav-link" href="pendaftaran.html">pendaftaran</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+      </div>
     </div>
-  </form>
+</nav>   
+
+<section id="eskul" class="container my-5">
+    <h2 class="text-center my-4">Ekstrakurikuler SMK Negeri 4 Tasikmalaya</h2>
     
-  </body>
+    <!-- Ekstrakurikuler Cards... -->
+    <div class="row">
+        <!-- Example of Ekstrakurikuler Card -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="PUB.jpeg" class="card-img-top" alt="Ekstrakurikuler 1">
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 1</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 1.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div of ano>
+        <!-- tkj-->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="pks.jpeg" class="card-img-top" alt="Ekstrakurikuler 2">
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 2</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 2.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <!-- toi -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="pmr.jpeg" class="card-img-top" alt="Ekstrakurikuler 3">        
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 3</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 3.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <!-- Ekstrakurikuler Cards... -->
+    <div class="row">
+        <!-- toi -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="PLH.jpeg" class="card-img-top" alt="Ekstrakurikuler 4">
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 4</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 4.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <!-- rpl-->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="futsal.jpeg" class="card-img-top" alt="Ekstrakurikuler 5">
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 5</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 5.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="voly.jpeg" class="card-img-top" alt="Ekstrakurikuler 6">
+                <div class="card-body">
+                    <h5 class="card-title">Ekstrakurikuler 6</h5>
+                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 6.</p>
+                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Ekstrakurikuler Cards... -->
+            <div class="row">
+                <!-- Example of Ekstrakurikuler Card -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="rohis.jpeg" class="card-img-top" alt="Ekstrakurikuler 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 7</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 7.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div of ano>
+                <!-- tkj-->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="sepakbola.jpeg" class="card-img-top" alt="Ekstrakurikuler 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 8</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 8.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- toi -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="futsal.jpeg" class="card-img-top" alt="Ekstrakurikuler 9">        
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 9</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 9.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ekstrakurikuler Cards... -->
+            <div class="row">
+                <!-- toi -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="pamuka.jpeg" class="card-img-top" alt="Ekstrakurikuler 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 10</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 10.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- rpl-->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="paskibra.jpeg" class="card-img-top" alt="Ekstrakurikuler 11">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 11</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 11.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="pd.jpeg" class="card-img-top" alt="Ekstrakurikuler 12">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekstrakurikuler 12</h5>
+                            <p class="card-text">Deskripsi kegiatan ekstrakurikuler 12.</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <section id="eskul" class="container my-5">
+                    <!-- Ekstrakurikuler Cards... -->
+                    <div class="row">
+                        <!-- Example of Ekstrakurikuler Card -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="basket.jpeg" class="card-img-top" alt="Ekstrakurikuler 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ekstrakurikuler 13</h5>
+                                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 13.</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div of ano>
+                        <!-- tkj-->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="laskar.jpeg" class="card-img-top" alt="Ekstrakurikuler 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ekstrakurikuler 14</h5>
+                                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 14.</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- toi -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="osis.jpeg" class="card-img-top" alt="Ekstrakurikuler 3">        
+                                <div class="card-body">
+                                    <h5 class="card-title">Ekstrakurikuler 15</h5>
+                                    <p class="card-text">Deskripsi kegiatan ekstrakurikuler 15.</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <footer class="ml-auto">
+                  <div
+                    class="text-white text-center p-3"
+                    style="height: 50px; background-color: black"
+                  >
+                    Created By FIRDAN-23 | 2024 All Rigth Reserved
+                  </div>
+                </footer>
+</body>
 </html>
